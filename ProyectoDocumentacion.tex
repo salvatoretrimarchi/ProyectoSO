@@ -8,7 +8,7 @@
 % =======================================================
     
     % *********   HEADERS AND FOOTERS ********
-    \def\ProjectAuthorLink{https://github.com/Ivan0123456789/ProyectoSO}           %Just to keep it in line
+    \def\ProjectAuthorLink{}           %Just to keep it in line
     \def\ProjectNameLink{\ProjectAuthorLink/Proyect}                %Link to Proyect
 
     % *********   DOCUMENT ITSELF   **************
@@ -434,11 +434,11 @@
     % ============ NAME OF THE PROJECT  ============
     \makebox[0pt][l]{\rule{1.3\textwidth}{3pt}}                     %Make a cool line
     
-    \href{https://compilandoconocimiento.com}                       %Link to project
+    \href{}                       %Link to project
     {\textbf{\textsc{\Huge ESCOM-IPN}}}\\[2.7cm]                    %Name of project   
 
     % ============ NAME OF THE BOOK  ===============
-    \href{https://github.com/Ivan0123456789/ProyectoSO}                       %Link to Author
+    \href{}                       %Link to Author
     {\fontsize{36}{50}                                              %Size of the book
         \selectfont \textbf{Proyecto Final}}\\[0.5cm]       %Name of the book
     {\fontsize{36}{50}                                              %Size of the book
@@ -449,7 +449,7 @@
     \vfill                                                          %Fill the space
     
     % ============ NAME OF THE AUTHOR  =============
-    \href{https://compilandoconocimiento.com/}                    %Link to Author
+    \href{}                    %Link to Author
     {\LARGE \textsf{Ivan Aldavera Gallaga}\\
     \LARGE \textsf{Laura Andrea Morales López}\\
     \LARGE \textsf{Erick Francisco Vázquez Nuñez}}   %Author
@@ -486,9 +486,23 @@
 \section{Objetivo}
     Diseñar y desarrollar, en lenguaje C y en un sistema operativo basado en UNIX, un programa que funcione como un interprete de comandos (minishell). En la realización de éste programa se verán reflejados conocimientos de comunicación entre procesos y de llamadas al sistema como fork, exec, pipe, dup.
 \section{Introducción}
-    
-\section{Desarrollo}
+    Shell script es un intérprete de comandos de UNIX, provee una interfaz entre el usuario
+y el kernel para que se ocupen funciones del sistema.
 
+
+\section{Desarrollo}
+La manera en que procesaremos los comandos ingresados en nuestro minibash 
+\begin{itemize}
+    \item Imprimir el directorio actual.
+    \item Obtienes la cadena
+    \item Dividimos la cadena de entrada en comandos
+    \item Comprobamos si existen tuberías, direccionamiento a archivos, etc.
+    \item Si hay tuberías hay que manejarlas.
+    \item Ejecutamos los comandos del sistema llamando a execvp.
+\end{itemize}
+   
+   
+    
 \section{Resultados}
 
 \section{Conclusiones}
