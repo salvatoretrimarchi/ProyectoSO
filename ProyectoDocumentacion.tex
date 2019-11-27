@@ -489,9 +489,10 @@
     Shell script es un intérprete de comandos de UNIX, provee una interfaz entre el usuario
 y el kernel para que se ocupen funciones del sistema.
 
+El objetivo de cualquier intérprete de comandos es ejecutar los programas que el usuario teclea en el prompt del mismo. El prompt es una indicación que muestra el intérprete para anunciar que espera una orden del usuario. Cuando el usuario escribe una orden, el intérprete ejecuta dicha orden. 
 
 \section{Desarrollo}
-La manera en que procesaremos los comandos ingresados en nuestro minibash 
+La manera en que procesaremos los comandos ingresados en nuestro minibash es de la siguiente manera.
 \begin{itemize}
     \item Imprimir el directorio actual.
     \item Obtienes la cadena
@@ -506,6 +507,10 @@ La manera en que procesaremos los comandos ingresados en nuestro minibash
 \section{Resultados}
 
 \section{Conclusiones}
+En este proyecto el manejo de tuberías es la parte más complicada del mismo, el uso de execvp es el que nos permitió realizar la funcionalidad de los comandos solicitados, y  cortar la cadena de entrada nos permite analizar comando por comando en la entrada, para los archivos se realizo un manejo de entrada y salida de los comandos.
+
+Generar este proyecto nos permitió ver como podemos usar funciones para llamar al sistema y manipular la visualización de la terminal para que tenga la apariencia que deseas.
+
 
 
 

@@ -69,7 +69,7 @@ int takeInput(char* str)
 void printDir() 
 { 
     char cwd[1024]; 
-    getcwd(cwd, sizeof(cwd)); 
+    getcwd(cwd, sizeof(cwd));
     printf("\nDir: %s", cwd); 
 } 
 //======================= Ejecuta comandos ======================================================================
@@ -87,8 +87,7 @@ void execArgs(char** parsed)
             printf("\nCould not execute command.."); 
         } 
         exit(0); 
-    } else { 
-                                                                                // Esperando al hijo
+    } else {                                                    // Esperando al hijo
         wait(NULL);  
         return; 
     } 
@@ -201,7 +200,7 @@ int ownCmdHandler(char** parsed)
     return 0; 
 } 
 
-//======================= Manejo de tubería ======================================================================
+//======================= Manejo de cadena (tubería) ======================================================================
 
 int parsePipe(char* str, char** strpiped) 
 { 
@@ -219,7 +218,7 @@ int parsePipe(char* str, char** strpiped)
     } 
 } 
 
- //======================= Manejo de cadena ======================================================================
+ //======================= Manejo de cadena espacios ======================================================================
 
 void parseSpace(char* str, char** parsed) 
 { 
@@ -239,7 +238,7 @@ void parseSpace(char* str, char** parsed)
         }
     }
 } 
-//======================= Manejo de cadena tubería======================================================================
+//======================= Manejo de cadena espacios tubería ======================================================================
 
 char ** parseSpacePipes(char* str, char** parsed) 
 { 
@@ -261,9 +260,10 @@ char ** parseSpacePipes(char* str, char** parsed)
         }
     }
 } 
-//======================= Procesar la cadena ======================================================================
 
 
+
+//======================= Procesar la cadena PRINCIPAL======================================================================
 
 int processString(char* str, char** parsed, char** parsedpipe) 
 { 
